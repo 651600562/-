@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style type="text/css">
+			img{
+				position: absolute;
+				left: 200px;
+				top:200px;
+			}
+		</style>
+	</head>
+	<body>		
+		<button>上</button>
+		<button>下</button>
+		<button>左</button>
+		<button>右</button>
+		<button>左上</button>
+		<button>左下</button>
+		<button>右上</button>
+		<button>右下</button>
+		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503324700752&di=b15bc9c7e03a0f0503db70ce1a5a2f43&imgtype=0&src=http%3A%2F%2Fexp.cdn-hotels.com%2Fhotels%2F4000000%2F3900000%2F3893200%2F3893187%2F3893187_25_y.jpg"/>
+	    <script type="text/javascript">
+	    	var oImg = document.getElementsByTagName("img")[0];
+	    	var oTop = document.getElementsByTagName("button")[0];
+	    	var oBottom = document.getElementsByTagName("button")[1];
+	    	var oLeft = document.getElementsByTagName("button")[2];
+	    	var oRight = document.getElementsByTagName("button")[3];
+	    	var oLeftTop = document.getElementsByTagName("button")[4];
+	    	var oLeftBottom = document.getElementsByTagName("button")[5];
+	    	var oRightTop = document.getElementsByTagName("button")[6];
+	    	var oRightButtom = document.getElementsByTagName("button")[7];
+	    	
+	    	var nowLeft = 200;
+	    	var nowtop = 200;
+	    	function move(){
+	    		oImg.style.left = nowLeft+"px";
+	    		oImg.style.top = nowtop+"px";
+	    	}
+	    	oTop.onclick = function(){
+	    		nowtop -= 10;
+	    		move();
+	    	}
+	    	oBottom.onclick = function(){
+	    		nowtop += 10;
+	    		move();
+	    	}
+	    	oLeft.onclick = function(){
+	    		nowLeft -= 10;
+	    		move();
+	    	}
+	    	oRight.onclick = function(){
+	    		nowLeft += 10;
+	    		move();
+	    	}
+	    	oLeftTop.onclick = function(){
+	    		nowtop -= 10;
+	    		nowLeft -= 10;
+	    		move();
+	    	}
+	    	oLeftBottom.onclick = function(){
+	    		nowtop += 10;
+	    		nowLeft -= 10;
+	    		move();
+	    	}
+	    	oRightTop.onclick = function(){
+	    		nowLeft += 10;
+	    		nowtop -= 10;
+	    		move();
+	    	}
+	    	oRightButtom.onclick = function(){
+	    		nowLeft += 10;
+	    		nowtop += 10;
+	    		move();
+	    	}
+	    </script>
+	    </body>
+</html>
